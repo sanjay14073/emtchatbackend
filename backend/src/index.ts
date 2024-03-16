@@ -39,6 +39,7 @@ io.on('connection', (socket: Socket) => {
     newMessage.UserId=msg.UserId;
     newMessage.HospitalId=msg.HospitalId;
     newMessage.message=msg.message;
+   
     await newMessage.save();
     console.log('message: ' + msg);
     io.emit('chat message', msg);

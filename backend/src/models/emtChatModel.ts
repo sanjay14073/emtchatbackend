@@ -10,19 +10,19 @@ interface EmtDocument extends Document {
 const EmtSchema = new mongoose.Schema<EmtDocument>({
     EmtId: {
         type: String,
-       
+        required:true,
     },
     UserId: {
         type: String,
-       
+       required:true,
     },
     HospitalId: {
         type: String,
-
+        required:true,
     },
     message: {
         type: String,
-
+        required:true,
     }
 });
 
